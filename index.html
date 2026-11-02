@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>web-surf — a zoomable map of the web</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="top">
+    <div class="brand"><strong>web-surf</strong><span>a zoomable map of the web</span><span id="count"></span></div>
+    <div class="controls">
+      <button id="zoomOut" aria-label="Zoom out">−</button>
+      <button id="zoomReset">Reset view</button>
+      <button id="zoomIn" aria-label="Zoom in">+</button>
+      <button id="random">Surprise me</button>
+    </div>
+  </div>
+  <div class="searchrow">
+    <input id="search" type="search" placeholder="Search websites…" autocomplete="off" aria-label="Search websites">
+    <div id="results"></div>
+  </div>
+  <div class="chips" id="chips"></div>
+</header>
+
+<main id="viewport" aria-label="Zoomable map of websites">
+  <div id="canvas"></div>
+</main>
+
+<div id="backdrop"></div>
+<section id="sheet" aria-label="Website details">
+  <button id="sheetClose" aria-label="Close">×</button>
+  <img id="sheetIcon" alt="" width="72" height="72">
+  <h2 id="sheetName"></h2>
+  <p id="sheetDomain"></p>
+  <span id="sheetCat"></span>
+  <p id="sheetDesc"></p>
+  <a id="sheetVisit" target="_blank" rel="noopener">Visit website ↗</a>
+</section>
+
+<script src="sites.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
